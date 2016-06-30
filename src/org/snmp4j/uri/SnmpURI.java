@@ -457,7 +457,7 @@ public class SnmpURI {
     private URI url;
     private SnmpUriCallback callback;
     
-    public AsyncTreeListener(URI url, SnmpUriCallback callback) {
+    AsyncTreeListener(URI url, SnmpUriCallback callback) {
       this.url = url;
       this.callback = callback;
     }

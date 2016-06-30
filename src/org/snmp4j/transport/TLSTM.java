@@ -613,7 +613,7 @@ public class TLSTM extends TcpTransportMapping {
     private final Object outboundLock = new Object();
     private final Object inboundLock = new Object();
 
-    public SocketEntry(TcpAddress address, Socket socket,
+    SocketEntry(TcpAddress address, Socket socket,
                        boolean useClientMode,
                        TransportStateReference tmStateReference) throws NoSuchAlgorithmException {
       this.inAppBuffer = ByteBuffer.allocate(getMaxInboundMessageSize());
@@ -832,7 +832,7 @@ public class TLSTM extends TcpTransportMapping {
   class SocketTimeout extends TimerTask {
     private SocketEntry entry;
 
-    public SocketTimeout(SocketEntry entry) {
+    SocketTimeout(SocketEntry entry) {
       this.entry = entry;
     }
 
@@ -890,7 +890,7 @@ public class TLSTM extends TcpTransportMapping {
     private BlockingQueue<SocketEntry> outQueue = new LinkedBlockingQueue<SocketEntry>();
     private BlockingQueue<SocketEntry> inQueue = new LinkedBlockingQueue<SocketEntry>();
 
-    public ServerThread() throws IOException, NoSuchAlgorithmException {
+    ServerThread() throws IOException, NoSuchAlgorithmException {
       // Selector for incoming requests
       selector = Selector.open();
       if (serverEnabled) {

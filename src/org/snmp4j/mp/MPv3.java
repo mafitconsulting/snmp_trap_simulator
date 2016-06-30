@@ -395,7 +395,7 @@ public class MPv3
     SecurityStateReference secStateReference;
     int errorCode;
 
-    public CacheEntry(int msgID,
+    CacheEntry(int msgID,
                       long reqID,
                       byte[] secEngineID,
                       SecurityModel secModel,

@@ -348,7 +348,7 @@ public class DefaultUdpTransportMapping extends UdpTransportMapping {
     private volatile boolean stop = false;
 
 
-    public ListenThread() throws SocketException {
+    ListenThread() throws SocketException {
       buf = new byte[getMaxInboundMessageSize()];
     }
 

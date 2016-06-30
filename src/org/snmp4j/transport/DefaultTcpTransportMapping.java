@@ -400,7 +400,7 @@ public class DefaultTcpTransportMapping extends TcpTransportMapping {
     private ByteBuffer readBuffer = null;
     private volatile int registrations = 0;
 
-    public SocketEntry(TcpAddress address, Socket socket) {
+    SocketEntry(TcpAddress address, Socket socket) {
       this.peerAddress = address;
       this.socket = socket;
       this.lastUse = System.nanoTime();
@@ -515,7 +515,7 @@ public class DefaultTcpTransportMapping extends TcpTransportMapping {
   class SocketTimeout extends TimerTask {
     private SocketEntry entry;
 
-    public SocketTimeout(SocketEntry entry) {
+    SocketTimeout(SocketEntry entry) {
       this.entry = entry;
     }
 
@@ -580,7 +580,7 @@ public class DefaultTcpTransportMapping extends TcpTransportMapping {
 
     private LinkedList<SocketEntry> pending = new LinkedList<SocketEntry>();
 
-    public ServerThread() throws IOException {
+    ServerThread() throws IOException {
       buf = new byte[getMaxInboundMessageSize()];
       // Selector for incoming requests
       selector = Selector.open();

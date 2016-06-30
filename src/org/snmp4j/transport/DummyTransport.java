@@ -137,7 +137,7 @@ public class DummyTransport<A extends IpAddress> extends AbstractTransportMappin
     private Queue<OctetString> queue;
     private AbstractTransportMapping tm;
 
-    public QueueProcessor(Queue<OctetString> queue, AbstractTransportMapping tm) {
+    QueueProcessor(Queue<OctetString> queue, AbstractTransportMapping tm) {
       this.queue = queue;
       this.tm = tm;
     }

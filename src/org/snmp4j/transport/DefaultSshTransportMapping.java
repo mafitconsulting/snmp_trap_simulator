@@ -118,7 +118,7 @@ public class DefaultSshTransportMapping extends AbstractTransportMapping<SshAddr
     private OctetString tmSecurityName;
     private SshAddress address;
 
-    public SessionID(OctetString tmSecurityName, SshAddress address) {
+    SessionID(OctetString tmSecurityName, SshAddress address) {
       this.tmSecurityName = tmSecurityName;
       this.address = address;
     }

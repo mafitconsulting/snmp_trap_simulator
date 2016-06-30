@@ -1534,7 +1534,7 @@ public class Snmp implements Session, CommandResponder {
      */
     private PDU nextPDU;
 
-    public PendingRequest(ResponseListener listener,
+    PendingRequest(ResponseListener listener,
                           Object userObject,
                           PDU pdu,
                           Target target,
@@ -1782,7 +1782,7 @@ public class Snmp implements Session, CommandResponder {
   }
 
   class AsyncPendingRequest extends PendingRequest {
-    public AsyncPendingRequest(ResponseListener listener,
+    AsyncPendingRequest(ResponseListener listener,
                                Object userObject,
                                PDU pdu,
                                Target target,
@@ -1801,7 +1801,7 @@ public class Snmp implements Session, CommandResponder {
     private PDU request;
     private ResponseListener listener;
 
-    public AsyncRequestKey(PDU request, ResponseListener listener) {
+    AsyncRequestKey(PDU request, ResponseListener listener) {
       this.request = request;
       this.listener = listener;
     }

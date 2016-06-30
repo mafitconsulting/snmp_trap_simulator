@@ -168,7 +168,7 @@ public class MultiThreadedMessageDispatcher implements MessageDispatcher {
     private ByteBuffer wholeMessage;
     private TransportStateReference tmStateReference;
 
-    public MessageTask(TransportMapping sourceTransport,
+    MessageTask(TransportMapping sourceTransport,
                        Address incomingAddress,
                        ByteBuffer wholeMessage,
                        TransportStateReference tmStateReference) {

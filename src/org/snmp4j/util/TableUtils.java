@@ -781,7 +781,7 @@ public class TableUtils extends AbstractSnmpUtility {
 
     private OID index;
 
-    public Row(OID index) {
+    Row(OID index) {
       super();
       this.index = index;
     }

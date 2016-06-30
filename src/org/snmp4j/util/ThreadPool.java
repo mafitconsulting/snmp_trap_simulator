@@ -228,7 +228,7 @@ public class ThreadPool implements WorkerPool {
     private WorkerTask task = null;
     private volatile boolean run = true;
 
-    public TaskManager(String name) {
+    TaskManager(String name) {
       super(name);
     }
 

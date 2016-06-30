@@ -128,7 +128,7 @@ public final class SNMPTool extends JFrame
                                 @Override
 				public void actionPerformed(ActionEvent e) {
 					JComboBox cb = (JComboBox)e.getSource();
-                                        cb.setSelectedIndex(2);
+                                        cb.setSelectedIndex(0);
 					srvName = (String)cb.getSelectedItem();
                                     switch (srvName) {
                                         case "tcemogwyw02":

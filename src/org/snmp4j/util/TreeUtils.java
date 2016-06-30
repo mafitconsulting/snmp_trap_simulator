@@ -236,7 +236,7 @@ public class TreeUtils extends AbstractSnmpUtility {
     private OID[] rootOIDs;
     private Target target;
 
-    public TreeRequest(TreeListener listener, OID[] rootOIDs, Target target,
+    TreeRequest(TreeListener listener, OID[] rootOIDs, Target target,
                        Object userObject, PDU request) {
       this.listener = listener;
       this.userObject = userObject;
@@ -347,7 +347,7 @@ public class TreeUtils extends AbstractSnmpUtility {
     private List<TreeEvent> collectedEvents;
     private volatile boolean finished = false;
 
-    public InternalTreeListener(List<TreeEvent> eventList) {
+    InternalTreeListener(List<TreeEvent> eventList) {
       collectedEvents = eventList;
     }
 
