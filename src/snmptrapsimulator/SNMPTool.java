@@ -131,11 +131,11 @@ public final class SNMPTool extends JFrame
                                         cb.setSelectedIndex(0);
 					srvName = (String)cb.getSelectedItem();
                                     switch (srvName) {
-                                        case "tcemogwyw02":
-                                            ipAddress = "172.28.237.6";
+                                        case "<your servername>":
+                                            ipAddress = "<your ip>";
                                             break;
-                                        case "tcemugwyw02":
-                                            ipAddress = "172.28.236.5";
+                                        case "<your servername>":
+                                            ipAddress = "<your ip>";
                                         default:
                                             ipAddress = srvName;
                                             break;
@@ -291,6 +291,7 @@ public final class SNMPTool extends JFrame
 	
 		public void sendSnmpV3Trap() 
 		{
+                    
 			try {
 				long start = System.currentTimeMillis();
 				String trapOID = OID.getText();
@@ -553,7 +554,6 @@ public final class SNMPTool extends JFrame
 			user.setBorder(border);
 			jp2.add(user);
 			user.setVisible(false);
-			
 			password.setLocation(70, 192);
 			password.setSize(200, 21);
 			password.setHorizontalAlignment(JTextField.LEFT);
